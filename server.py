@@ -14,6 +14,7 @@ class Server(BaseHTTPRequestHandler):
 
     def do_GET(self):
         split_path = os.path.splitext(self.path)
+        print(split_path)
         request_extension = split_path[1]
 
         if request_extension is "" or request_extension is ".html":
